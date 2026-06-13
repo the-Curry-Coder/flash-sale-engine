@@ -31,23 +31,11 @@ public class User {
     @Column(unique = true)
     private String email;
 
-    @Column(length = 200)
-    private String addressLine1;
+    @Column(length = 50)
+    private Long phoneNumber;
 
-    @Column(length = 200)
-    private String addressLine2;
-
-    @Column(length = 100)
-    private String city;
-
-    @Column(length = 100)
-    private String country;
-
-    @Column(length = 100)
-    private String state ;
-
-    @Column(length = 100)
-     private String zip;
+    @OneToMany(mappedBy = "user")
+    private List<Address> addresses;
 
      private Boolean status = Boolean.TRUE;
 
