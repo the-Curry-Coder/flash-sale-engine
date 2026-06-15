@@ -3,16 +3,17 @@ package com.thecurrycoder.flashsaleengine.model;
 
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
 @Entity(name = "user")
-@Data
+@Getter
+@Setter
 @ToString
 @EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     @Id
