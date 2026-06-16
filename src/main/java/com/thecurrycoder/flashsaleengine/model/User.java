@@ -5,6 +5,7 @@ package com.thecurrycoder.flashsaleengine.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity(name = "user")
@@ -34,6 +35,14 @@ public class User {
 
     @Column(length = 50)
     private Long phoneNumber;
+
+    private String createdBy ;
+
+    private LocalDateTime createdOn;
+
+    private LocalDateTime updatedAt;
+
+    private String updatedBy;
 
     @OneToMany(mappedBy = "user")
     private List<Address> addresses;

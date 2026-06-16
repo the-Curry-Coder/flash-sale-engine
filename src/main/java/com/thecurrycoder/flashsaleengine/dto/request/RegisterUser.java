@@ -25,7 +25,9 @@ public class RegisterUser {
 
 
     @Schema( description = " Phone of the User" , requiredMode = Schema.RequiredMode.REQUIRED)
-    private String phone;
+    private Long phone;
+
+
 
     @Schema( description = "Address Of the User During Registration")
     private AddressDTO address;
