@@ -39,6 +39,7 @@ public class UserServiceImpl implements UserService {
 
         Role role =  roleRepo.findByRole("ROLE_CUSTOMER");
 
+
         if(role==null)
         {
             throw  new RuntimeException("ROLE_CUSTOMER is Not Found ");
